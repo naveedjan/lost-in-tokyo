@@ -44,7 +44,7 @@ const Nav = () => (
   </nav>
 );
 
-const Overlay = ({ showInfo, title, description }) => (
+const Overlay = ({ showInfo, title, description, link }) => (
   <div
     className="absolute w-100 h-100 flex items-center pa3 pa4-ns bg-aqua overlay"
     style={{
@@ -52,9 +52,11 @@ const Overlay = ({ showInfo, title, description }) => (
     }}
   >
     <div>
-      <h1 className="f4 f3-ns mt0 mb2 regular black normal lh-title">
-        {title}
-      </h1>
+      <a className="no-underline" href={link} target="_blank">
+        <h1 className="f4 f3-ns mt0 mb2 regular black normal lh-title">
+          {title}
+        </h1>
+      </a>
       <p className="lh-title lh-copy-ns mv0 black f6 measure-l">
         {description}
       </p>
